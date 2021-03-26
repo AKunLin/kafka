@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: demo-test22
+  kafka:
+    # 配置连接到服务端集群的配置项 ip:port,ip:port
+    bootstrap-servers: 192.168.211.136:9092
+    consumer:
+      #      auto-commit-interval: 100
+      auto-offset-reset: earliest
+      #      enable-auto-commit: true
+      group-id: test-consumer-group
+      # 默认值即为字符串
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      # 默认值即为字符串
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+server:
+  port: 9000
